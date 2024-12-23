@@ -1,4 +1,6 @@
 public class Main {
+    private Employee[] cache;
+
     public static void getAllEmployees(Employee[] cache) {
         for (Employee employer : cache) {
             System.out.println(employer.toString());
@@ -32,10 +34,10 @@ public class Main {
     public static int getAvgSalary(int totalSalary, Employee[] cache) {
         return totalSalary / cache.length;
     }
-    public static void main(String[] args) {
-        Employee[] cache = new Employee[10];
+    public void main(String[] args) {
+        this.cache = new Employee[10];
         cache[0] = new Employee("Федор", "Акимов", "Иванов", "1", 150000);
-        cache[1] = new Employee("Илья", "Петров", "Петров", "2", 140000);
+        cache[1] = new Employee("Илья", "Дурманов", "Петров", "2", 140000);
         cache[2] = new Employee("Виктория", "Шишкина", "Михайловна", "3", 100000);
         cache[3] = new Employee("Даниил", "Травинов", "Романович", "4", 104000);
         cache[4] = new Employee("Владимир", "Сидоров", "Тигранович", "5", 110000);

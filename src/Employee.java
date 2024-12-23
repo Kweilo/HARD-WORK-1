@@ -4,7 +4,7 @@ public class Employee {
     private String middleName;
     private String department;
     private int salary;
-    static int id;
+    private static int id;
 
     public Employee(String name, String lastName, String middleName, String department, int salary) {
         this.name = name;
@@ -48,7 +48,7 @@ public class Employee {
     }
     @Override
     public int hashCode() {
-        return java.util.Objects.hash(lastName);
+        return java.util.Objects.hash(lastName) + java.util.Objects.hash(name);
     }
     @Override
     public String toString() {
